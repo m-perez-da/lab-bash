@@ -1,0 +1,129 @@
+
+Usuario@DESKTOP-CO2214S MINGW64 ~/labs/101 (master)
+$ ls
+exercices/  inputs/  lorem/  lorem-copy/  outputs/  readme.md
+
+Usuario@DESKTOP-CO2214S MINGW64 ~/labs/101 (master)
+$ echo 'Hello World'
+Hello World
+
+Usuario@DESKTOP-CO2214S MINGW64 ~/labs/101 (master)
+$ mkdir new_dir
+
+Usuario@DESKTOP-CO2214S MINGW64 ~/labs/101 (master)
+$ ls
+exercices/  inputs/  lorem/  lorem-copy/  new_dir/  outputs/  readme.md
+
+Usuario@DESKTOP-CO2214S MINGW64 ~/labs/101 (master)
+$ rmdir new_dir
+
+Usuario@DESKTOP-CO2214S MINGW64 ~/labs/101 (master)
+$ ls
+exercices/  inputs/  lorem/  lorem-copy/  outputs/  readme.md
+
+Usuario@DESKTOP-CO2214S MINGW64 ~/labs/101 (master)
+$ cp lorem/sed.txt lorem-copy/
+
+Usuario@DESKTOP-CO2214S MINGW64 ~/labs/101 (master)
+$ cp lorem/at.txt lorem-copy/; cp lorem/lorem.txt lorem-copy/
+
+Usuario@DESKTOP-CO2214S MINGW64 ~/labs/101 (master)
+$ cat lorem/sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+
+Usuario@DESKTOP-CO2214S MINGW64 ~/labs/101 (master)
+$ cat lorem/at.txt
+At vero eos ET accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+deleniti atque corrupti quos dolores ET quas molestias excepturi sint occaecati cupiditate non
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum ET dolorum fuga.
+Et harum quidem rerum facilis est ET expedita distinctio.
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saepe eveniET
+ut ET voluptates repudiandae sint ET molestiae non recusandae.
+Itaque earum rerum hic tenETur a sapiente delectus, ut aut reiciendis voluptatibus maiores
+alias consequatur aut perferendis doloribus asperiores repellat
+
+Usuario@DESKTOP-CO2214S MINGW64 ~/labs/101 (master)
+$ cat lorem/lorem.txt
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat 
+
+Usuario@DESKTOP-CO2214S MINGW64 ~/labs/101 (master)
+$ head -3 lorem-copy/sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+
+Usuario@DESKTOP-CO2214S MINGW64 ~/labs/101 (master)
+$ tail -3 lorem-copy/sed.txt
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+
+Usuario@DESKTOP-CO2214S MINGW64 ~/labs/101 (master)
+$ echo 'Homo homini lupus.' >> lorem-copy/sed.txt
+
+Usuario@DESKTOP-CO2214S MINGW64 ~/labs/101 (master)
+$ tail -3 lorem-copy/sed.txt
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+Homo homini lupus.
+
+Usuario@DESKTOP-CO2214S MINGW64 ~/labs/101 (master)
+$ sed -i 's/et/ET/g' lorem/at.txt
+
+Usuario@DESKTOP-CO2214S MINGW64 ~/labs/101 (master)
+$ whoami
+Usuario
+
+Usuario@DESKTOP-CO2214S MINGW64 ~/labs/101 (master)
+$ pwd
+/c/Users/Usuario/labs/101
+
+Usuario@DESKTOP-CO2214S MINGW64 ~/labs/101 (master)
+$ ls lorem/*.txt
+lorem/at.txt  lorem/lorem.txt  lorem/sed.txt
+
+Usuario@DESKTOP-CO2214S MINGW64 ~/labs/101 (master)
+$ wc -l <lorem/sed.txt
+9
+
+Usuario@DESKTOP-CO2214S MINGW64 ~/labs/101 (master)
+$ find . -name lorem*.*
+./lorem/lorem.txt
+./lorem-copy/lorem.txt
+
+Usuario@DESKTOP-CO2214S MINGW64 ~/labs/101 (master)
+$ read name
+manuel
+
+Usuario@DESKTOP-CO2214S MINGW64 ~/labs/101 (master)
+$ echo $name
+manuel
+
+Usuario@DESKTOP-CO2214S MINGW64 ~/labs/101 (master)
+$ mkdir $name
+
+Usuario@DESKTOP-CO2214S MINGW64 ~/labs/101 (master)
+$ ls
+exercices/  inputs/  lorem/  lorem-copy/  manuel/  outputs/  readme.md
+
+Usuario@DESKTOP-CO2214S MINGW64 ~/labs/101 (master)
+$ rmdir $name
+
+Usuario@DESKTOP-CO2214S MINGW64 ~/labs/101 (master)
+$ ls
+exercices/  inputs/  lorem/  lorem-copy/  outputs/  readme.md
+
+
